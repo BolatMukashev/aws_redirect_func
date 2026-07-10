@@ -1,0 +1,27 @@
+# Виртуальное окружение — точно не нужно в образе, там ставится свой pip install
+.venv/
+env/
+
+# Секреты — НЕ должны попадать в образ, задаются как env vars в Lambda
+.env
+
+# Кэш и логи
+__pycache__/
+*.pyc
+*.pyo
+*.log
+pip-log.txt
+
+# Git-специфичное — в образе не нужно и может раздувать контекст
+.git/
+.gitignore
+
+# Docker-специфичное
+Dockerfile
+.dockerignore
+
+# Прочее, что не нужно в рантайме
+README.md
+tests/
+.vscode/
+.idea/
